@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>groupie-tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>  
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+            </div>
+            <div id ="title">
+                <h1>Groupie Tracker</h1>
+            </div>
+        </div>
+
+        <div id="navBar">
+            <table>
+                <tr>
+                <td><a href="home.html">Home</a></td>
+                <td><a href="index.html">Artists</a></td>
+                <td><a href="aboutus.html">About Us</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="content">
+            <div id="artistTitle">
+                <spain id="label"><h1>{{ .All.Name}} ♪♬</h1> </spain> <br>
+            </div>
+                <div id="articeImageCont">
+                    <div id="artistImage" style="background-image: url('{{ .All.Image}}'); background-repeat: no-repeat; background-size: cover; ">
+                    </div>
+                </div>
+
+                <div id="info">
+                    <ul>
+                        <li><spain id="label"> First Album:</spain> {{ .All.FirstAlbum}}</li>
+                        <li><spain id="label"> Members:</spain> 
+                            <ul>
+                                {{ range .All.Members}}
+                                <li id="members">{{.}}</li>
+                                {{end}}
+                            </ul>
+                        </li>
+                        <li><spain id="label"> Creation Date:</spain> {{ .All.CreationDate}}</li>
+                    </ul>
+
+                </div> 
+
+                <div id="info2">
+                    <li><spain id="label"> Dates and locations: </spain></li>
+                        <ul>
+                            {{ range .MergeDatesAndLocations.Index3 }}
+                            <li id="members"><spain id="label">{{.Location}}:</spain></li>
+                              <li id="dates">
+                                <ul>
+                                    <li id="dates">{{ .TheData}}</li>
+                                </ul>
+                                </li>
+                            {{end}}
+                        </ul>
+                        </ul>
+                </div>
+
+                <div id="returnBack">
+                    <a href="index.html"> ← Back To Artists</a>
+                </div>     
+        
+            <div id="footer">Created By:&nbsp;Ruqaya Helal,  &nbsp;&nbsp;Maryam Abbas</div>
+        </div>
+    </div>
+</body>
+<html>

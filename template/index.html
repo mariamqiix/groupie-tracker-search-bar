@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>groupie-tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>  
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+            </div>
+            <div id ="title">
+                <h1>Groupie Tracker</h1>
+            </div>
+        </div>
+
+        <div id="navBar">
+            <table>
+                <tr>
+                <td><a href="home.html">Home</a></td>
+                <td><a href="index.html">Artists</a></td>
+                <td><a href="aboutus.html">About Us</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="searchBar">
+            <form  method="POST" action="/search">
+                 <input type="text" id="theArtist" name="theArtist" oninput="getSuggestions()" list="suggestionsList" placeholder="Search..." required>
+                 <datalist id="suggestionsList"></datalist>
+                 <input type="submit" value="" id="searchicon">
+            </form>
+        </div>
+
+
+        <div id="content">
+            {{ range .All}}
+                <div id ="box" style="background-image: url('{{ .Image}}'); background-repeat: no-repeat; background-size: cover; ">
+                    <a href="/submit?value={{ .ID }}">
+                    <div id="name">
+                        {{ .Name}}
+                    </div>
+                    </a>
+                </div>
+            {{end}}
+        </div> 
+        <div id="footer">Created By:&nbsp;Ruqaya Helal,  &nbsp;&nbsp;Maryam Abbas</div>
+    </div>
+</body>
+
+<script>
+    function getSuggestions() {
+        const searchInput = document.getElementById("theArtist");
+        const suggestionsList = document.getElementById("suggestionsList");
+        const query = searchInput.value;
+    
+        // Make an AJAX request to the server to get suggestions
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", `/suggestions?query=${encodeURIComponent(query)}`);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const suggestions = JSON.parse(xhr.responseText);
+    
+                // Clear previous suggestions
+                suggestionsList.innerHTML = "";
+    
+                // Add new suggestions to the datalist
+                suggestions.forEach(function(suggestion) {
+                    const option = document.createElement("option");
+                    option.value = suggestion;
+                    suggestionsList.appendChild(option);
+                });
+            }
+        };
+        xhr.send();
+    }
+</script>
+
+<html>
+
+
+

@@ -1,0 +1,99 @@
+body{margin:0;padding:0;border:none; background-color: #20212b;  height: 100%; width: 100%;
+    font-family:"Courier New", Courier, monospace; text-align:center; overflow: auto; 
+}
+
+/* the container of all page */
+#container{width: 100%; float: left; max-width: 100%; clear: both; height: 100%; overflow: auto}
+
+
+/* header that contain logo and title */
+#header{width: 100%;height: 150px;float: left;background-color: #f7b904; 
+    border-bottom:10px solid #9e6752;   position: sticky; top: 0;
+    background-image: url("https://media.istockphoto.com/id/497802746/photo/gold-paper-texture-background.jpg?s=2048x2048&w=is&k=20&c=VWkYJBuOVvKkf-Kfe1O0-HEhuSFmezyw7pnD2HEgGX4=");
+    background-repeat: no-repeat; background-size: cover; display: flex; overflow:hidden;  white-space: nowrap;}
+
+#logo{float: left; width: 8%; height: 90%; color: aliceblue; padding-top: 50px;
+    background-image: url("https://img1.picmix.com/output/stamp/normal/9/8/5/5/1685589_c27dd.gif");
+    background-repeat: no-repeat; background-size: cover; display: flex; overflow: hidden;} 
+
+#title{float: left; width: 40%; height: 150px; font-size: 28px;
+    padding-top: 50px; text-align: left; color:#190019;  display: flex;  min-height: 500px; 
+}
+/* end of the header content */
+
+
+
+/* navagtion bar start */
+#navBar{float: right; clear: both; height: 80px; width: 800px; overflow: hidden;} 
+
+#navBar table{text-align:center; width:100% ;font-size:20px; text-align:center; font-weight:bold; float: right; min-width: 500px;}
+#navBar td {padding:1.45%; width:33.333%}
+#navBar td:hover {background-color:#fbe4d8; text-decoration:underline; color:#522b5b}
+
+#navBar a {color:#dfb6b2; text-decoration:none;}
+#navBar a:visited {color:#dfb6b2}
+/* navagtion bar end */
+
+
+
+/* cintenet of pages */
+#content{width: 100%; float: left; clear: both; display:flex; flex-wrap: wrap; justify-content: flex-start;
+    justify-content: center; margin-bottom: 2; height: auto; color: #dfb6b2}
+#content p{padding: 5%; font-size: 24px; margin-bottom: 2%; color: #534145;}
+#aboutus{color: #534145; padding-top: 5%;}
+
+
+/* start index Page content */
+#box{width: 250px; height: 250px; margin: 1%; font-size: 24px; border: 1px solid #dfb6b2;border-radius: 10px}
+#box:hover{transform: scale(1.2); border: 1px solid #dfb6b2;border-radius: 10px}
+
+#name{background-color: #534145; float: left; color:white; 
+    font-weight: bold; ;height: 100%; display: flex; 
+    justify-content: center; align-items: center; width: 250px; font-size: 25px; opacity: 0;
+    border: 1px solid #522b5b; border-radius: 10px} 
+#name:hover{opacity: 0.8;filter: blur(0.5px)}
+#searchBar{float: left; align-items: center; width: 100%; height: 10%;}
+#theArtist{width: 400px; height: 35px; border-radius: 25px; background-color: #dfb6b2;  padding: 1%; }
+#searchicon{background-image: url("https://o.remove.bg/downloads/88f0518b-ae1e-4537-b6d2-3d4aee2c2b7d/istockphoto-924437708-612x612-removebg-preview.png");
+    background-repeat: no-repeat; 
+    background-size: cover; background-color: white;
+    width: 35px; height: 35px; border-radius: 20px; border: 2px solid #dfb6b2;
+}
+#suggestionsList{background-color: #dfb6b2; border: 10px solid black;}
+/* end of the  index page content */
+
+
+
+/* start of Error Pages content */
+#ErrorMsG{color:#534145; font-size: 28px; padding-top: 20%; text-align: center;
+    justify-content: center;  
+}
+/* end of Error Pages content */
+
+
+
+/* start of Artist Page content */
+#artistTitle{float: left; clear: both; width: 100%; text-align: center; font-family: Candara; font-size: 22px}
+
+#articeImageCont{float: left; width: 350px; padding-left: 3%; padding-right: 6%; margin: 1%;}
+#artistImage{width: 300px; height: 300px; border: 1px solid #dfb6b2;border-radius: 10px}
+
+#info{float: left; text-align: left; font-size: 18px; line-height: 1.5; width: 400px; margin: 1%;  padding: 1%;}
+/* //border: 10px solid #9e6752; border-radius: 30px */
+#info2{float: left; text-align: left; font-size: 18px; line-height: 1.5; width: 400px;  height: 300px; overflow: auto; margin: 1%; padding: 1%; }
+
+#label{color:#9e6752}
+
+#members{list-style-type: circle}
+
+#dates{list-style-type: none}
+
+#returnBack{float: left;clear: both; width: 50%; text-align: center; align-items: center; margin-top: 2%; font-size: 18px}
+#returnBack a {color:#dfb6b2 ;text-decoration:none; font-weight: bold}
+#returnBack a:hover {color:#dfb6b2 ;text-decoration:underline; font-weight: bold}
+/* end of Artist Page content */
+
+
+
+/* footer */
+#footer{height: 7%;width: 100%;float: left;  clear: both; color:#534145; padding-top: 2%}
